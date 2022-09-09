@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador</title>
+</head>
+<body>
+    <h1>Simule Aqui!</h1>
+    <p></p>
+    <h2>Veja o quanto é possível economizar ao utilizar os serviços da MRITech</h2>
+    <p></p>
+    Qual o gasto anual com manutenção?<input id="ipt_gasto">
+    <p></p>
+    <button onclick="calcula()">Simular</button>
+    <p><Span id="msg"></Span></p>
+
+</body>
+</html>
+
+<script>
+    function calcula() {
+        var estima20 = Number(ipt_gasto.value) * 0.20
+        var estima40 = Number(ipt_gasto.value) * 0.40
+
+        msg.innerHTML = `Estima-se que, ao utilizar nossa solução, é possível economizar de R$${estima20.toFixed(0)}
+        até R$${estima40.toFixed(0)}`
+    }
+</script>
